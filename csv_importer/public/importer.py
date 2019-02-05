@@ -7,13 +7,15 @@ from django.contrib.auth.models import User
 from public.models import Article, Page
 
 
-def td_to_minues(td):
+def td_to_minutes(td):
     return (td.seconds//60) % 60
 
 
 def run():
+
     start_time = datetime.datetime.now()
     print('started at {}'.format(start_time.strftime("%H:%M")))
+
     # first, articles
     with open('{}/public/csvs/articles.csv'.format(settings.BASE_DIR)) as csvfile:
         reader = csv.DictReader(csvfile)
@@ -46,6 +48,5 @@ def run():
     finish_time = datetime.datetime.now()
     print('finished at {}'.format(finish_time.strftime("%H:%M")))
     difference = finish_time - start_time
-    print('finished :)', 'minutes {}'.format(td_to_minues(difference)))
-
+    print('finished :)', 'run time: {} minutes'.format(td_to_minutes(difference)))
 
