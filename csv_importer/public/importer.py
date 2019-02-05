@@ -48,5 +48,5 @@ def run():
     finish_time = datetime.datetime.now()
     print('finished at {}'.format(finish_time.strftime("%H:%M")))
     difference = finish_time - start_time
-    print('finished :)', 'run time: {} minutes'.format(td_to_minutes(difference)))
+    print('finished! run time: {} minutes'.format(td_to_minutes(difference)))
 
