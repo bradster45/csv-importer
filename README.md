@@ -1,5 +1,6 @@
 # csvImporter
-csv importer demonstrated with article and page models
+
+csv importer demonstrated with simple models. CSVs are read using python and rows are transformed into model objects using Django's built in get_or_create.
 
 ### Demo
 
